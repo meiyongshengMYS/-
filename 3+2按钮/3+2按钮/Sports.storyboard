@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sports View Controller-->
+        <scene sceneID="V8X-1Q-MFa">
+            <objects>
+                <viewController storyboardIdentifier="HMSportsViewController" id="F9w-MU-kaK" customClass="HMSportsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4V0-Da-AxQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cyb-hq-bwS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wDd-N1-bFq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUG-71-hdH">
+                                <rect key="frame" x="259" y="346" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.79437658629441621" green="0.51631536234542308" blue="0.21425683313507382" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" image="ic_sport_finish"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xXt-R8-bP4">
+                                <rect key="frame" x="16" y="346" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.12623068995642814" green="0.79437658629441621" blue="0.052958617239759309" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clickButton:" destination="F9w-MU-kaK" eventType="touchUpInside" id="gsN-UA-wsZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uUG-71-hdH" firstAttribute="centerY" secondItem="xXt-R8-bP4" secondAttribute="centerY" id="1yW-HS-mt1"/>
+                            <constraint firstItem="xXt-R8-bP4" firstAttribute="leading" secondItem="wDd-N1-bFq" secondAttribute="leading" constant="20" id="AWj-Qp-Eyc"/>
+                            <constraint firstAttribute="trailing" secondItem="uUG-71-hdH" secondAttribute="trailing" constant="20" id="H3g-7b-cy7"/>
+                            <constraint firstItem="uUG-71-hdH" firstAttribute="height" secondItem="xXt-R8-bP4" secondAttribute="height" id="WWy-iN-rni"/>
+                            <constraint firstItem="Cyb-hq-bwS" firstAttribute="top" secondItem="xXt-R8-bP4" secondAttribute="bottom" constant="221" id="Xgc-DL-LKu"/>
+                            <constraint firstItem="uUG-71-hdH" firstAttribute="width" secondItem="xXt-R8-bP4" secondAttribute="width" id="wTQ-XX-KCN"/>
+                            <constraint firstItem="Cyb-hq-bwS" firstAttribute="top" secondItem="uUG-71-hdH" secondAttribute="bottom" constant="221" id="zS6-BS-2bC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="continPauseButton" destination="xXt-R8-bP4" id="q6b-81-kfa"/>
+                        <outlet property="leadingConstraint" destination="AWj-Qp-Eyc" id="mSi-8a-lvv"/>
+                        <outlet property="tralingConstraint" destination="H3g-7b-cy7" id="Fpk-Zt-dc5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Twg-bn-tOW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="92" y="186.65667166416793"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_sport_finish" width="100" height="100"/>
+    </resources>
+</document>
